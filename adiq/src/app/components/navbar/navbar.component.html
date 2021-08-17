@@ -1,0 +1,31 @@
+<div class="uk-background-primary uk-light">
+    <div class="uk-container">
+      <nav class="uk-navbar-container uk-navbar-transparent uk-margin" uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="/">
+            <span class="uk-icon uk-icon-image uk-margin-small-right" style="background-image: url(/adiq/src/assets/adiq.png);"></span>
+          </a>
+          <ul class="uk-navbar-nav">
+            <li><a [routerLink]="['/products']">Produtos</a></li>
+            <li><a [routerLink]="['/projects']">Projetos</a></li>
+          </ul>
+        </div>
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav">
+
+            <li>
+              <a [routerLink]="['/account']">
+                <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+                {{ user?.name }}
+              </a>
+            </li>
+            <li>
+              <a (click)="logout()">
+                <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
